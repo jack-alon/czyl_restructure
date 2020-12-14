@@ -1,0 +1,9 @@
+ext{
+    isModule = true//false 为 集成模式 true为组件化模式
+
+    module_community_service = true//组件模式 社区服务
+    module_community_access = false//组件模式 社区通行
+    module_device = false//组件模式 设备
+    module_main = false//启动页
+    module_user = false//用户相关
+}

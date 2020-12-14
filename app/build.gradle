@@ -1,0 +1,57 @@
+if (!rootProject.ext.isModule){
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        if (!rootProject.ext.isModule){
+            applicationId "com.bjcr.czyl"
+        }
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:${rootProject.ext.dependencies.core_ktx}"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.dependencies.appcompat}"
+    implementation "com.google.android.material:material:${rootProject.ext.dependencies.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.dependencies.constraintlayout}"
+    implementation project(':component_base')
+    implementation project(':component_data')
+    if (!rootProject.ext.isModule){
+        implementation project(':module_community_access')
+        implementation project(':module_community_service')
+        implementation project(':module_device')
+        implementation project(':module_main')
+        implementation project(':module_user')
+    }
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

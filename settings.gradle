@@ -1,0 +1,9 @@
+include ':module_main'
+include ':module_community_service'
+include ':module_user'
+include ':module_device'
+include ':module_community_access'
+include ':component_data'
+include ':component_base'
+include ':app'
+rootProject.name = "czyl_restructure"
