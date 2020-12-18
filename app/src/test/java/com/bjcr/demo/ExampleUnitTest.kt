@@ -1,4 +1,4 @@
-package com.bjcr.czyl
+package com.bjcr.demo
 
 import org.junit.Test
 

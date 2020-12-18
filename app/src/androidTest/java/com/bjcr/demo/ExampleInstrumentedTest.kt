@@ -1,4 +1,4 @@
-package com.bjcr.czyl
+package com.bjcr.demo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

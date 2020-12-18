@@ -1,8 +1,7 @@
-package com.bjcr.czyl
+package com.bjcr.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bjcr.component_base.BaseApplication
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         if (!rootProject.ext.isModule){
-            applicationId "com.bjcr.czyl"
+            applicationId "com.bjcr.demo"
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion

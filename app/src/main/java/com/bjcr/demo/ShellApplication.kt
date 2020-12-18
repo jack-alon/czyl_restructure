@@ -1,4 +1,4 @@
-package com.bjcr.czyl
+package com.bjcr.demo
 
 import android.content.Context
 import com.bjcr.component_base.BaseApplication
